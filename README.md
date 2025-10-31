@@ -1,5 +1,5 @@
-# defneerencan-Defne-Erencan-DSA210
-DSA210 Term Project – Seasonal Spending Analysis using Akbank Card Data.
+# Defne Erencan DSA210 Term Project
+Seasonal Spending Analysis using Akbank Card Data.
 
 ## Introduction
 I am **Defne Erencan**, and this project analyzes my **seasonal spending patterns** based on my **Akbank card transaction data**.  
