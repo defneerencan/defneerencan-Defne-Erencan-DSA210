@@ -17,7 +17,8 @@ This project focuses on several key differences:
 - **Less spending at home**, since many daily expenses (food, bills, etc.) are paid by my family.
 
 ## Data Source
-The data comes from **Akbank card transaction records**, exported as an **Excel file**.  
+The data comes from **Akbank card transaction records**, exported as an **Excel file**.
+Data was exported **manually** from **Akbank mobile banking**.
 Main columns include:
 
 - **Date & Time** – When the transaction happened.  
