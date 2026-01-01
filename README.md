@@ -26,53 +26,67 @@ Main columns include:
 - **Merchant Name** – Where the purchase was made.  
 - **Remaining Balance** – Card balance after the transaction.  
 
+## Exploratory Data Analysis (EDA)
+Several visualizations were created to explore spending behavior across different time periods and categories.
+
+- **Total spending over time** shows clear differences between school and summer periods, indicating seasonal variation in expenses.
+- **Category-based plots** reveal that essential spending dominates during the school term, while discretionary and social spending increase in summer.
+- **Coffee and snack-related plots** suggest higher frequency and spending during exam weeks.
+- **Home vs. university comparisons** show lower overall spending when staying at the family home.
+
+**Interpretation:**  
+These visual patterns suggest meaningful differences in spending behavior across seasons and living conditions, motivating formal hypothesis testing.
+
 ## Hypothesis Testing
-- **Spending Difference Test:**  
-  - **H₀:** There is **no difference** in total spending between school and summer periods.  
-  - **H₁:** Spending is **significantly different** between these two periods.  
-  - **Method:** t-test for statistical comparison.  
-  - **Interpretation:** If *p-value < 0.05*, the difference is statistically significant.
 
-- **Coffee Consumption Test:**  
-  - **H₀:** Exam weeks **do not affect** coffee purchases.  
-  - **H₁:** Coffee spending **increases during exams**.  
-  - **Interpretation:** *p-value < 0.05* means the change is significant.
+### Spending Difference Test
+- **H₀ (Null Hypothesis):** There is **no difference** in total spending between school and summer periods.  
+- **H₁ (Alternative Hypothesis):** Total spending is **significantly different** between school and summer periods.  
+- **Method:** Independent t-test.  
+- **Interpretation:** If *p-value < 0.05*, the difference in spending is statistically significant.
 
-- **Family Home Spending Test:**  
-  - **H₀:** Spending is **the same** at university and at home.  
-  - **H₁:** Spending **decreases** when staying at home.  
-  - **Interpretation:** *p-value < 0.05* means spending is lower at home.
+### Coffee Consumption Test
+- **H₀ (Null Hypothesis):** Exam weeks **do not affect** coffee purchases.  
+- **H₁ (Alternative Hypothesis):** Coffee spending **increases during exam weeks**.  
+- **Method:** t-test comparing exam and non-exam periods.  
+- **Interpretation:** If *p-value < 0.05*, exam periods have a significant effect on coffee spending.
+
+### Family Home Spending Test
+- **H₀ (Null Hypothesis):** Spending is **the same** at university and at the family home.  
+- **H₁ (Alternative Hypothesis):** Spending **decreases** when staying at the family home.  
+- **Method:** t-test.  
+- **Interpretation:** If *p-value < 0.05*, spending at home is significantly lower.
 
 ## Tools & Technologies
 - **Python**
-  - `pandas` – Organizing and cleaning data  
-  - `numpy` – Math operations  
-  - `matplotlib` & `seaborn` – Graphs and visualizations  
-  - `scipy.stats` – Statistical analysis  
-- **Jupyter Notebook** – For analysis and visualization  
-- **Excel** – For collecting and categorizing data  
+  - `pandas` – Data cleaning and organization  
+  - `numpy` – Numerical operations  
+  - `matplotlib` & `seaborn` – Data visualization  
+  - `scipy.stats` – Hypothesis testing  
+- **Jupyter Notebook** – Analysis and visualization  
+- **Excel** – Data collection and categorization  
 
 ## Data Processing
-- **Cleaning Data:** Removed columns that were not needed (e.g., receipt numbers).  
-- **Categorizing Transactions:** Grouped transactions into:  
+- **Cleaning Data:** Removed unnecessary columns and handled missing values.  
+- **Categorizing Transactions:**  
   - **Essential spending:** Food, transportation, school items  
   - **Discretionary spending:** Entertainment, self-care, shopping  
   - **Social spending:** Restaurants, outings, events  
-- **Time Periods Defined:**  
-  - **Summer Vacation (June – September)**  
-  - **School Term (October – May)**  
-  - **Family Home Periods (Winter & Summer Breaks)**  
+- **Time Period Definitions:**  
+  - **Summer Vacation:** June – September  
+  - **School Term:** October – May  
+  - **Family Home Periods:** Winter and summer breaks  
 
 ## Data Analysis & Visualizations
-- **Total Spending Over Time:** Compared spending in school and summer using **line and area charts**.  
-- **Spending by Category:** Showed category totals with **bar and stacked bar plots**.  
-- **Social vs. Academic Spending:** Compared these categories using **grouped bar** and **violin plots**.  
-- **Coffee Spending Trends:** Checked **how often and how much** coffee was bought during exams using **line and histogram plots**.  
-- **Balance Tracking:** Studied how the balance changed over time using **scatter** and **cumulative plots**.  
-- **Home vs. University Spending:** Compared both situations using **box plots** and **heatmaps**.  
+- **Total Spending Over Time:** Line and area charts comparing school and summer spending.  
+- **Spending by Category:** Bar and stacked bar plots.  
+- **Social vs. Academic Spending:** Grouped bar and violin plots.  
+- **Coffee Spending Trends:** Line plots and histograms during exam periods.  
+- **Balance Tracking:** Scatter and cumulative balance plots.  
+- **Home vs. University Spending:** Box plots and heatmaps.
 
 ## Limitations & Future Work
-- **Personal Data:** Based only on my own spending, so results are not general for everyone.  
-- **Limited Time Range:** More years of data could show clearer patterns.  
-- **Automation Idea:** Using machine learning to classify expenses automatically.  
-- **Future Improvements:** Building an interactive dashboard to track spending in real time.  
+- **Personal Data:** Analysis is based on a single individual and is not generalizable.  
+- **Limited Time Range:** Additional years of data could improve trend reliability.  
+- **Automation Idea:** Applying machine learning to automatically classify transactions.  
+- **Future Improvements:** Developing an interactive dashboard for real-time spending tracking.
