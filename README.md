@@ -110,24 +110,38 @@ relying on merchant-level information.
 - **Logistic Regression** (baseline model)  
 - **Random Forest Classifier** (non-linear model)  
 
-Logistic Regression was used as a simple baseline, while Random Forest was
-chosen to better capture non-linear relationships in spending behavior.
+Logistic Regression was used as a baseline to evaluate linear separability,
+while Random Forest was selected to capture non-linear relationships
+in spending behavior.
 
 ### Model Evaluation
 - **Evaluation Metrics:** Accuracy, Precision, Recall, F1-score  
-- **Confusion Matrices** were used to analyze class-level performance.  
+- **Evaluation Tools:** Classification reports and confusion matrices  
 
-The Random Forest model achieved higher overall performance compared to
-Logistic Regression, particularly for frequent categories such as
-**Restaurant** and **Bank Transfer**.
+**Logistic Regression Results:**
+- **Accuracy:** ~0.54  
+- **Macro F1-score:** ~0.08  
+
+The baseline model showed limited performance, particularly for
+low-frequency categories, highlighting the limitations of linear models
+in this setting.
+
+**Random Forest Results:**
+- **Accuracy:** ~0.57  
+- **Weighted F1-score:** ~0.56  
+- **Restaurant category F1-score:** ~0.72  
+- **Bank Transfer category F1-score:** ~0.68  
+
+Random Forest achieved improved performance, especially for frequently
+occurring expense categories.
 
 ### Interpretation
-- Transaction amount was identified as the **most important feature**
-  for predicting spending categories.
+- **Transaction amount** was identified as the most influential feature
+  in predicting expense categories.
 - Temporal features such as **month** and **weekday** contributed
   additional predictive power.
-- Lower performance on rare categories highlights the effect of
-  **class imbalance** in personal spending data.
+- Lower performance on rare categories reflects **class imbalance**
+  in personal spending data.
 
 ### Use Case
 This machine learning approach demonstrates how future card transactions
