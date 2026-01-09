@@ -86,6 +86,55 @@ These visual patterns suggest meaningful differences in spending behavior across
 - **Balance Tracking:** Scatter and cumulative balance plots.  
 - **Home vs. University Spending:** Box plots and heatmaps.
 
+## Machine Learning
+
+To extend the analysis beyond descriptive statistics and hypothesis testing,
+a **machine learning classification model** was developed to predict
+expense categories based on transaction-level features.
+
+### Problem Definition
+- **Task:** Expense category prediction  
+- **Type:** Supervised multiclass classification  
+- **Target Variable:** Expense category  
+
+### Features Used
+- **Transaction Amount**  
+- **Month**  
+- **Weekday**  
+- **Weekend Indicator**  
+
+These features capture temporal and behavioral spending patterns without
+relying on merchant-level information.
+
+### Models Implemented
+- **Logistic Regression** (baseline model)  
+- **Random Forest Classifier** (non-linear model)  
+
+Logistic Regression was used as a simple baseline, while Random Forest was
+chosen to better capture non-linear relationships in spending behavior.
+
+### Model Evaluation
+- **Evaluation Metrics:** Accuracy, Precision, Recall, F1-score  
+- **Confusion Matrices** were used to analyze class-level performance.  
+
+The Random Forest model achieved higher overall performance compared to
+Logistic Regression, particularly for frequent categories such as
+**Restaurant** and **Bank Transfer**.
+
+### Interpretation
+- Transaction amount was identified as the **most important feature**
+  for predicting spending categories.
+- Temporal features such as **month** and **weekday** contributed
+  additional predictive power.
+- Lower performance on rare categories highlights the effect of
+  **class imbalance** in personal spending data.
+
+### Use Case
+This machine learning approach demonstrates how future card transactions
+can be **automatically categorized**, reducing the need for manual labeling
+and enabling scalable personal finance analysis.
+
+
 ## Limitations & Future Work
 - **Personal Data:** Analysis is based on a single individual and is not generalizable.  
 - **Limited Time Range:** Additional years of data could improve trend reliability.  
